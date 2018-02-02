@@ -23,7 +23,7 @@ describe('CommentBox', ()=>{
       expect(component.find('textarea')).to.have.value('new comment');
     });
     it('when submitted, clears the input', () => {
-      console.log(component);
+      //console.log(component); //shows the form tag.
       component.simulate('submit');
       expect(component.find('textarea')).to.have.value('');
     });
