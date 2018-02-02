@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-export default class CommentBox extends Component {
+class CommentBox extends Component {
   constructor(props){
     super(props);
     this.state = { comment: ''};
@@ -10,6 +12,7 @@ export default class CommentBox extends Component {
   }
   handleSubmit(event){
     event.preventDefault();
+    this.props.saveComment(this.state.comment);
     this.setState({comment:''})
   }
   render(){
@@ -24,3 +27,9 @@ export default class CommentBox extends Component {
     )
   }
 }
+
+//As we only care about wiring up our action creator and not the state,
+//we do not define mapStateToProps.
+
+//Having actions object as an argument binds all the action creators to the CommentBox class.
+export default connect(null, actions)(CommentBox);
