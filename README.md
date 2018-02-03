@@ -4,6 +4,13 @@ A thorough React and Redux tester for a Web Application using Mocha and Chai for
 
 ![Add Comments!](https://i.imgur.com/TfRQPvJ.png)
 
+### Mocha (Used to run tests!)
+
+Loads tests, run them one by one, clean up after each.
+
+### Chai (Used to write tests!)
+
+Helpers for asserting certain properties about test subject.
 ---
 
 If you want to check it out, go to the directory where you want to clone it and then:
